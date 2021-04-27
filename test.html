@@ -1,0 +1,603 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<style type = "text/css">
+
+
+
+h1 {
+    text-align: center;
+}
+
+#title {
+    text-decoration: underline;
+}
+
+#quiz {
+    text-indent: 10px;
+    display:none;
+}
+
+.button {
+    border:4px solid;
+    border-radius:5px;
+    width: 140px;
+    padding-left:5px;
+    padding-right: 5px;
+    position: relative;
+    float:right;
+    background-color: #ccccff;
+    color: black;
+    margin: 0 2px 0 2px;
+	
+}
+
+
+.button.active {
+    background-color: #F8F8FF;
+    color: #525252;
+}
+
+button {
+    position: relative;
+    float:right;
+}
+
+.button a {
+    text-decoration: none;
+    color: black;
+}
+
+#container {
+    width:50%;
+    margin:auto;
+    padding: 0 25px 40px 10px;
+    background-color: #b3b3b3;
+    border:4px solid #d9d9d9;
+    border-radius:5px;
+    color: #000000;
+    font-weight: bold;
+
+}
+
+#section {
+    width:50%;
+    margin:auto;
+    padding: 0 25px 40px 10px;
+    background-color:#f2f2f2 ;
+    border:4px solid #d9d9d9;
+    border-radius:5px;
+    color: #000000;
+    font-weight: bold;
+    
+}
+
+#kk,#kk2,#kk3{
+float:left;
+border:1px solid blue;
+width:72px;
+height:20px;
+position:relative;
+margin:2px;
+}
+#div1,#div2,#div3{
+ width:55px; 
+ height:30px;
+ text-align:center;
+ cursor:move;
+ position:relative; 
+ text-decoration: underline;
+ }
+#kk4,#kk5,#kk6{
+width:70px;
+    height:14px;
+    padding:5px;
+    border-bottom:1px solid #aaaaaa;
+}
+#div4,#div5,#div6{
+ width:55px; 
+height:30px;
+text-align:center;
+cursor:move;
+position:relative;
+ font-weight: bold;
+ }
+</style>
+<script>
+function dropItem(ev) {
+ev.preventDefault();
+}
+function drag(ev) {
+ev.dataTransfer.setData("Text",ev.target.id);
+}
+function drop(ev) {
+ev.preventDefault();
+var abc = ev.dataTransfer.getData("Text");
+ev.target.appendChild(document.getElementById(abc));
+}
+function dropItem1(ev) {
+ev.preventDefault();
+}
+function drag(ev) {
+ev.dataTransfer.setData("Text",ev.target.id);
+}
+function drop(ev) {
+ev.preventDefault();
+var abc = ev.dataTransfer.getData("Text");
+ev.target.appendChild(document.getElementById(abc));
+}
+</script>
+<script>
+	var input=document.getElementByTagName('input');
+	for(var i=0;i<input;i++){
+	if(input[i].type=='radio'  && input[i].checked){
+	return true;
+	}
+	}
+	}
+    </script>
+	
+</head>
+<body>
+<div id='container'>
+			<div id='title'>
+				<h1>Основи на Уеб Програмирането-ТЕСТ</h1>
+			</div>
+			
+    		
+   			<br/>
+  			
+    		
+    	
+    	</div>
+		<div id="section"><br>
+<div id="question1">
+<h4>1.Въпрос:Направете правилната подредба на думите.</h4>
+<div id="kk"  ondrop="drop(event)" ondragover="dropItem(event)"
+ draggable="true" ondragstart="drag(event)" ></div>
+ <div id="kk2"  ondrop="drop(event)" ondragover="dropItem(event)"
+ draggable="true" ondragstart="drag(event)" ></div>
+ <div id="kk3"  ondrop="drop(event)" ondragover="dropItem(event)"
+ draggable="true" ondragstart="drag(event)" ></div>
+ <br><br>
+<div id="div1" ondrop="drop(event)" ondragover="dropItem(event)"
+ draggable="true" ondragstart="drag(event)"  >CSS
+</div>
+
+<div id="div2" ondrop="drop(event)" ondragover="dropItem(event)"
+ draggable="true" ondragstart="drag(event)"  >JavaScript
+</div>
+
+<div id="div3" ondrop="drop(event)" ondragover="dropItem(event)"
+ draggable="true" ondragstart="drag(event)"  >HTML
+</div><br>
+
+</div>
+<br><br>
+<div id="question2">
+<h4>2.Въпрос:Поставете думите на правилните места. </h4>
+<p><div id="kk4"  ondrop="drop(event)" ondragover="dropItem(event)"
+ draggable="true" ondragstart="drag(event)" ></div>
+ се използва за променяне  , за изтриване,за създаване на нови HTML елементи и др.</p>
+<p> <div id="kk5"  ondrop="drop(event)" ondragover="dropItem(event)"
+ draggable="true" ondragstart="drag(event)" ></div>
+ се използва за визуално оформление на документи.</p>
+ <p>Изработването на <div id="kk6"  ondrop="drop(event)" ondragover="dropItem(event)"
+ draggable="true" ondragstart="drag(event)" ></div>
+  документа става с помощта на така наречените тагове.</p>
+ <br><br>
+<div id="div4" ondrop="drop(event)" ondragover="dropItem(event)"
+ draggable="true" ondragstart="drag(event)"  >CSS
+</div>
+
+<div id="div5" ondrop="drop(event)" ondragover="dropItem(event)"
+ draggable="true" ondragstart="drag(event)"  >JavaScript
+</div>
+
+<div id="div6" ondrop="drop(event)" ondragover="dropItem(event)"
+ draggable="true" ondragstart="drag(event)"  >HTML
+</div><br>
+
+</div>
+<br><br>
+
+<div id="question3">
+
+ <h4>3.Въпрос:Коя е правилната фигура? </h4><br><br>
+<canvas id="tutorial" width="200" height="180">Try it</canvas>
+	<canvas id="tutorial1"  width="200" height="180"></canvas>
+<canvas id="tutorial2"  width="200" height="180"></canvas>
+
+</div>
+<br><br>
+<div id="question4">
+ <form id = "q" name = "quiz">
+  <h4>4.Въпрос:Какъв е резултът?  </h4>
+   var x = function (a, b) {return a * b};<br>
+document.getElementById("demo").innerHTML = x(2,9 );
+ <br><br>
+    <input id = "textbox" type = "text" name = "question4">
+
+	</form>
+  
+</div>
+<br><br>
+
+<div id="question5">
+<form name="question_form5" id="question_form5" >
+      <div id="question_1"> <H4>5.Въпрос:С кой таг в HTML се прави текстово поле?</H4>
+      </div>
+      <p>
+        <input type="radio" name="question_5" class="wrong" value="a" />
+        <label id="greshen1">textfield</label>
+      </p>
+      <p>
+        <input type="radio" name="question_5" class="wrong" value="b" />
+       <label id="greshen2"> textinput type="text"</label>
+      </p>
+      <p>
+        <input type="radio" name="question_5"  id="veren" value="c" />
+       <label id="veren1">input type="text"</label>
+      </p>
+      <p>
+        <input type="radio" name="question_5" class="wrong" value="d" />
+        <label id="greshen3">text  </label>
+      </p>
+	  <p>
+        <input type="radio" name="question_5" class="wrong" value="e" />
+        <label id="greshen4"> type="text" </label>
+      </p>
+	</form>
+
+</div>
+<br><br>
+<div id="question6">
+ <form name="question_form6" id="question_form6" >
+      <div id="question_1"> <H4>6.Въпрос:Кои не са верни?Свойствата за фонов ефект в CSS НЕ са:</H4>
+      </div>
+      <p>
+        <input type="checkbox" name="question_6" id="cr1" class="answers" value="a" />
+        <label id="correct1">word-spacing</label>
+        
+      </p>
+      <p>
+        <input type="checkbox" name="question_6" id="cr2" class="answers" value="b" />
+        <label id="correct2"> visibility</label>
+        
+      </p>
+      <p>
+        <input type="checkbox" name="question_6" id="wr1" class="answers" value="c" />
+         <label id="wrong1"> background-position</label>
+        
+      </p>
+      <p>
+        <input type="checkbox" name="question_6" id="cr3" class="answers" value="d" />
+       <label id="correct3">font</label>
+        
+      </p>
+	   <p>
+        <input type="checkbox" name="question_6" id="wr2" class="answers" value="e" />
+         <label id="wrong2">background-attachment</label>
+        </span>
+      </p>
+	   <p>
+        <input type="checkbox" name="question_1" id="cr4" class="answers" value="f" />
+       <label id="correct4">border-bottom</label>
+        
+      </p>
+   </form>
+
+</div>
+<br><br>
+<input type="button" class="button" value="Приключи теста!" onclick="my();" >
+<div id="com"></div>
+<div id="com1"></div>
+<div id="com2"></div>
+<div id="com3"></div>
+<div id="com4"></div>
+<div id="com5"></div>
+<div id="com6"></div>
+<div id="com7"></div>
+<div id="com8"></div>
+<div id="com9"></div>
+</div>
+
+<script>
+	var checks = document.querySelectorAll(".answers");
+var max = 4;
+for (var i = 0; i < checks.length; i++)
+  checks[i].onclick = selectiveCheck;
+function selectiveCheck (event) {
+  var checkedChecks = document.querySelectorAll(".answers:checked");
+  if (checkedChecks.length >= max + 1)
+    return false;
+}
+	</script>
+
+<script>
+
+
+
+function my(){
+
+var first2=document.getElementById("div5");
+var first3=document.getElementById("kk4").textContent;
+var second2=document.getElementById("div4");
+var second3=document.getElementById("kk5").textContent;
+var third2=document.getElementById("div6");
+var third3=document.getElementById("kk6").textContent;
+var coment3=document.getElementById("com3");
+var coment4=document.getElementById("com4");
+var coment5=document.getElementById("com5");
+
+if(first2.innerHTML==first3){
+first2.style.color="green";
+coment3.innerHTML="2.Въпрос:Вие поставихте на ПРАВИЛНО място JavaScript."
+}else{
+first2.style.color="red";
+coment3.innerHTML="2.Въпрос:Вие поставихте на ГРЕШНО място JavaScript."
+}
+
+if(second2.innerHTML==second3){
+second2.style.color="green";
+coment4.innerHTML="2.Въпрос:Вие поставихте на ПРАВИЛНО място CSS."
+}else{
+second2.style.color="red";
+coment4.innerHTML="2.Въпрос:Вие поставихте на ГРЕШНО място CSS."
+}
+
+if( third2.innerHTML==third3){
+third2.style.color="green";
+coment5.innerHTML="2.Въпрос:Вие поставихте на ПРАВИЛНО място HTML."
+}else{
+third2.style.color="red";
+coment5.innerHTML="2.Въпрос:Вие поставихте на ГРЕШНО място HTML."
+}
+var second=document.getElementById("div1");
+var second1=document.getElementById("kk2").textContent;
+var first=document.getElementById("div3");
+var first1=document.getElementById("kk").textContent;
+var third=document.getElementById("div2");
+var third1=document.getElementById("kk3").textContent;
+var coment=document.getElementById("com");
+var coment1=document.getElementById("com1");
+var coment2=document.getElementById("com2");
+
+if(first.innerHTML==first1){
+first.style.color="green";
+coment.innerHTML="1.Въпрос:Вие поставихте на ПРАВИЛНО място HTML."
+}else{
+first.style.color="red";
+coment.innerHTML="1.Въпрос:Вие поставихте на ГРЕШНО място HTML."
+}
+
+if(second.innerHTML==second1){
+second.style.color="green";
+coment1.innerHTML="1.Въпрос:Вие поставихте на ПРАВИЛНО място CSS."
+}else{
+second.style.color="red";
+coment1.innerHTML="1.Въпрос:Вие поставихте на ГРЕШНО място CSS."
+}
+
+if( third.innerHTML==third1){
+third.style.color="green";
+coment2.innerHTML="1.Въпрос:Вие поставихте на ПРАВИЛНО място JavaScript."
+}else{
+third.style.color="red";
+coment2.innerHTML="1.Въпрос:Вие поставихте на ГРЕШНО място JavaScript."
+}
+
+var question4 = document.quiz.question4.value;
+	
+	if(question4=="18"){
+	document.getElementById("textbox").style.color = "green";
+	document.getElementById("com7").innerHTML = "4.Въпрос:Вашият отговор е верен.";
+	}else{
+	document.getElementById("textbox").style.color = "red";
+	document.getElementById("com7").innerHTML = "4.Въпрос:Вашият отговор е грешен.";
+	}
+
+	var veren= document.getElementById('veren1');
+		 var greshen1=document.getElementById('greshen1');
+		  var greshen2=document.getElementById('greshen2');
+		   var greshen3=document.getElementById('greshen3');
+		    var greshen4=document.getElementById('greshen4');
+			var coment5=document.getElementById('com8');
+			if (document.getElementById('veren').checked==true) {
+  
+	   veren.style.color="green";
+    greshen1.style.color="red";
+	greshen2.style.color="red";
+	greshen3.style.color="red";
+	greshen4.style.color="red";
+	coment5.innerHTML="5.Въпрос:Вашият отговор е верен.";
+    }else {
+      veren.style.color="green";
+    greshen1.style.color="red";
+	greshen2.style.color="red";
+	greshen3.style.color="red";
+	greshen4.style.color="red";
+
+	  coment5.innerHTML="5.Въпрос:Вашият отговор е грешен. ";
+    }
+	
+	 var correct1= document.getElementById('correct1');
+     var correct2=document.getElementById('correct2');
+	 var correct3=document.getElementById('correct3');
+	 var correct4=document.getElementById('correct4');
+	 var wrong1=document.getElementById('wrong1');
+	 var wrong2=document.getElementById('wrong2');
+	 var coment6=document.getElementById('com9');
+if (document.getElementById('cr1').checked==true &&  document.getElementById('cr2').checked==true &&  document.getElementById('cr3').checked==true &&  document.getElementById('cr4').checked==true )  {
+	wrong1.style.color="red";
+    wrong2.style.color="red";
+    correct1.style.color="green";
+	correct2.style.color="green";
+	correct3.style.color="green";
+	correct4.style.color="green";
+	coment6.innerHTML="6.Въпрос:Вашият отговор е верен.";
+    }else {
+      wrong1.style.color="red";
+	   wrong2.style.color="red";
+    correct1.style.color="green";
+	 correct2.style.color="green";
+	  correct3.style.color="green";
+	   correct4.style.color="green";
+
+	  coment6.innerHTML="6.Въпрос:Вашият отговор е грешен. ";
+    }
+	
+
+if(functionC ){
+document.getElementById("tutorial").style.border="3px solid green";
+document.getElementById("tutorial1").style.border="3px solid red";
+document.getElementById("tutorial2").style.border="3px solid red";
+document.getElementById("com6").innerHTML="3.Въпрос:Вашият отговор е верен.";
+}else {
+document.getElementById("tutorial").style.border="3px solid green";
+document.getElementById("tutorial1").style.border="3px solid red";
+document.getElementById("tutorial2").style.border="3px solid red";
+document.getElementById("com6").innerHTML="3.Въпрос:Вашият отговор е грешен.";
+}
+
+}
+</script>
+<script>
+	var functionC = false;
+document.getElementById("tutorial").addEventListener("click", myFunction);
+document.getElementById("tutorial2").addEventListener("click", myFunction2);
+document.getElementById("tutorial1").addEventListener("click", myFunction3);
+function myFunction2(){
+document.getElementById("tutorial2").style.border="3px solid blue";
+
+}
+ function myFunction3() {
+document.getElementById("tutorial1").style.border="3px solid blue";
+
+}
+
+function myFunction() {
+document.getElementById("tutorial").style.border="3px solid blue";
+return functionC=true;
+}
+
+</script>
+<script>
+	var canvas = document.getElementById('tutorial1');
+
+
+if (canvas.getContext) {
+    var ctx = canvas.getContext('2d');
+
+  
+    ctx.beginPath();
+  
+    ctx.save();
+    ctx.fillStyle = "yellow";
+    ctx.arc(100, 90, 75, 0, Math.PI * 2, false);
+    ctx.fill();
+    ctx.stroke();
+    ctx.restore();
+
+    ctx.beginPath();
+    ctx.save();
+    ctx.lineWidth = 2;
+    ctx.fillStyle = "blue";
+    ctx.strokeStyle = "black"        
+    ctx.arc(55, 60, 5, 0, Math.PI * 2, false);
+	ctx.rect(140,58,10,10);
+    ctx.fill();
+    ctx.stroke();
+    ctx.restore();
+}
+
+ 
+
+	</script>
+<script>
+var canvas = document.getElementById('tutorial');
+
+
+if (canvas.getContext) {
+    var ctx = canvas.getContext('2d');
+
+  
+    ctx.beginPath();
+  
+    ctx.save();
+    ctx.fillStyle = "yellow";
+    ctx.arc(100, 90, 75, 0, Math.PI * 2, false);
+    ctx.fill();
+    ctx.stroke();
+    ctx.restore();
+
+    ctx.beginPath();
+      ctx.arc(100,120, 30, 0, Math.PI, false);
+      ctx.closePath();
+      ctx.lineWidth = 5;
+      ctx.fillStyle = 'red';
+      ctx.fill();
+      ctx.strokeStyle = '#550000';
+      ctx.stroke();
+	  
+
+    ctx.beginPath();
+    ctx.save();
+    ctx.lineWidth = 2;
+    ctx.fillStyle = "blue";
+    ctx.strokeStyle = "black"        
+    ctx.arc(55, 60, 5, 0, Math.PI * 2, false);
+  ctx.rect(140,58,10,10);
+    ctx.fill();
+    ctx.stroke();
+    ctx.restore();
+}
+
+ 
+
+	</script>
+	
+	<script>
+	var canvas = document.getElementById('tutorial2');
+
+
+if (canvas.getContext) {
+    var ctx = canvas.getContext('2d');
+
+  
+    ctx.beginPath();
+  
+    ctx.save();
+    ctx.fillStyle = "yellow";
+    ctx.arc(100, 90, 75, 0, Math.PI * 2, false);
+    ctx.fill();
+    ctx.stroke();
+    ctx.restore();
+
+    ctx.beginPath();
+      ctx.arc(100,120, 30, 0, Math.PI, false);
+      ctx.closePath();
+      ctx.lineWidth = 5;
+      ctx.fillStyle = 'red';
+      ctx.fill();
+      ctx.strokeStyle = '#550000';
+      ctx.stroke();
+	  
+
+    ctx.beginPath();
+    ctx.save();
+    ctx.lineWidth = 2;
+    ctx.fillStyle = "blue";
+    ctx.strokeStyle = "black"        
+    ctx.arc(55, 60, 5, 0, Math.PI * 2, false);
+    ctx.fill();
+    ctx.stroke();
+    ctx.restore();
+}
+
+ 
+
+	</script>
+</body>
+</html>
